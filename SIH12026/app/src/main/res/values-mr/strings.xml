@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">ई-वेस्ट मित्र (E-Waste Mitra)</string>
+    <string name="tagline">स्वच्छ उद्यासाठी स्मार्ट सोल्यूशन्स</string>
+    <string name="nav_home">मुख्य पृष्ठ</string>
+    <string name="nav_price">बाजार भाव</string>
+    <string name="nav_lots">लॉट यादी</string>
+    <string name="nav_ledger">एकूण कमाई</string>
+
+    <string name="welcome_collector">स्वागत आहे, मित्रा</string>
+    <string name="action_create_lot">नवीन संकलन</string>
+    <string name="action_price_board">बाजार दर पहा</string>
+    <string name="action_safety">सुरक्षा मार्गदर्शक</string>
+    <string name="action_recyclers">रिसायकलर्स शोधा</string>
+
+    <string name="recent_transactions">अलीकडील क्रियाकलाप</string>
+
+    <!-- Material Categories -->
+    <string name="cat_pcb">सर्किट बोर्ड</string>
+    <string name="cat_battery">बॅटऱ्या</string>
+    <string name="cat_crt">जुने टीव्ही (CRT)</string>
+    <string name="cat_cable">तांब्याची वायर</string>
+
+    <string name="title_portal">ई-वेस्ट मित्र पोर्टल</string>
+    <string name="select_role_prompt">पोर्टल भूमिका निवडा</string>
+    <string name="role_kabadi">कबाडी वाला</string>
+    <string name="role_recycler">रिसायकलर</string>
+    <string name="auth_btn_text">सुरक्षित साइन इन करा</string>
+    <string name="create_account_title">नवीन खाते तयार करा</string>
+</resources>

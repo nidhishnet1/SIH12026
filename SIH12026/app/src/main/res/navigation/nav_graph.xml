@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.demosih11.ui.login.LoginFragment"
+        android:label="E-Waste Portal Sign In"
+        tools:layout="@layout/fragment_login" />
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.demosih11.ui.register.RegisterFragment"
+        android:label="User Registration"
+        tools:layout="@layout/fragment_register" />
+
+    <fragment
+        android:id="@+id/adminPanelFragment"
+        android:name="com.example.demosih11.ui.admin.AdminPanelFragment"
+        android:label="Admin Panel"
+        tools:layout="@layout/fragment_admin_panel" />
+
+    <fragment
+        android:id="@+id/recyclerDashboardFragment"
+        android:name="com.example.demosih11.ui.recyclers.RecyclerDashboardFragment"
+        android:label="Recycler Console"
+        tools:layout="@layout/fragment_recycler_dashboard" />
+
+    <fragment
+        android:id="@+id/recyclerProfileFragment"
+        android:name="com.example.demosih11.ui.recyclers.RecyclerProfileFragment"
+        android:label="Enterprise Profile"
+        tools:layout="@layout/fragment_recycler_profile" />
+
+    <fragment
+        android:id="@+id/recyclerChatFragment"
+        android:name="com.example.demosih11.ui.recyclers.RecyclerChatFragment"
+        android:label="Recycler Secure Chat"
+        tools:layout="@layout/fragment_recycler_chat" />
+
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.example.demosih11.ui.chat.ChatFragment"
+        android:label="Trade Chat"
+        tools:layout="@layout/fragment_chat" />
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.example.demosih11.ui.dashboard.DashboardFragment"
+        android:label="Dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.demosih11.ui.profile.ProfileFragment"
+        android:label="My Profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/priceBoardFragment"
+        android:name="com.example.demosih11.ui.priceboard.PriceBoardFragment"
+        android:label="Price Board"
+        tools:layout="@layout/fragment_price_board" />
+
+    <fragment
+        android:id="@+id/myLotsFragment"
+        android:name="com.example.demosih11.ui.lots.MyLotsFragment"
+        android:label="My Lots"
+        tools:layout="@layout/fragment_my_lots" />
+
+    <fragment
+        android:id="@+id/ledgerFragment"
+        android:name="com.example.demosih11.ui.ledger.LedgerFragment"
+        android:label="Earnings"
+        tools:layout="@layout/fragment_ledger" />
+
+    <fragment
+        android:id="@+id/safetyGuideFragment"
+        android:name="com.example.demosih11.ui.safety.SafetyGuideFragment"
+        android:label="Safety Guide"
+        tools:layout="@layout/fragment_safety_guide" />
+
+    <fragment
+        android:id="@+id/createLotFragment"
+        android:name="com.example.demosih11.ui.lots.CreateLotFragment"
+        android:label="New Lot"
+        tools:layout="@layout/fragment_create_lot" />
+
+    <fragment
+        android:id="@+id/submitEwasteFragment"
+        android:name="com.example.demosih11.ui.lots.SubmitEwasteFragment"
+        android:label="Submit E-Waste"
+        tools:layout="@layout/fragment_submit_ewaste" />
+
+    <fragment
+        android:id="@+id/recyclerDiscoveryFragment"
+        android:name="com.example.demosih11.ui.recyclers.RecyclerDiscoveryFragment"
+        android:label="Recyclers"
+        tools:layout="@layout/fragment_recycler_list" />
+
+</navigation>

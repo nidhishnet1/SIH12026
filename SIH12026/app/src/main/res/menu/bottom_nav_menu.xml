@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/dashboardFragment"
+        android:icon="@drawable/ic_home"
+        android:title="@string/nav_home" />
+    <item
+        android:id="@+id/priceBoardFragment"
+        android:icon="@drawable/ic_price"
+        android:title="@string/nav_price" />
+    <item
+        android:id="@+id/myLotsFragment"
+        android:icon="@drawable/ic_lots"
+        android:title="@string/nav_lots" />
+    <item
+        android:id="@+id/profileFragment"
+        android:icon="@drawable/ic_recycler"
+        android:title="Profile" />
+</menu>

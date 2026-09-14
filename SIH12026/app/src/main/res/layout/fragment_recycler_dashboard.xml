@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FAFAFA"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recycler Enterprise Workspace"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#111111"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GreenTech Recycling Plant #04"
+        android:textSize="14sp"
+        android:textColor="#555555"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="16dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnViewEnterpriseProfile"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View Enterprise Profile"
+        app:icon="@drawable/ic_recycler"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Requirements/Offers Card -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="2dp"
+        app:cardBackgroundColor="@color/design_default_color_primary">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Current Factory Bulk Order"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Looking for: 5,000 Kg Circuit Boards"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fulfilled: 34% (1,700 Kg received)"
+                android:textColor="#D0E7FF"
+                android:textSize="13sp"
+                android:layout_marginTop="4dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnUpdateRequirement"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Update Bulk Pricing &amp; Target"
+                android:textColor="@color/design_default_color_primary"
+                app:backgroundTint="@android:color/white"
+                app:cornerRadius="6dp" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Incoming Bulk Lots for Bidding"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        android:layout_marginBottom="12dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvIncomingLots"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        tools:listitem="@layout/item_recycler_lot"
+        android:layout_marginBottom="16dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnLogoutRecycler"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Log Out Enterprise Session"
+        android:textColor="#666666"
+        app:strokeColor="#CCCCCC" />
+
+</LinearLayout>

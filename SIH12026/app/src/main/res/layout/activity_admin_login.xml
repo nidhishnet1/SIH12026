@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#1A237E">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardAdminHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:cardBackgroundColor="#0D47A1"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="32dp">
+
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:src="@drawable/ic_logo_ewaste"
+                    android:contentDescription="@string/app_name"
+                    app:tint="@android:color/white"
+                    android:layout_marginBottom="8dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_name"
+                    android:textColor="@android:color/white"
+                    android:textSize="28sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="CENTRAL CONTROL PANEL"
+                    android:textColor="#90CAF9"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.1"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardAdminLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="@android:color/white"
+            app:layout_constraintTop_toBottomOf="@id/cardAdminHeader">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Secure Root Authentication"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#0D47A1"
+                    android:layout_marginBottom="20dp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layoutAdminUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Admin Identifier Key"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_marginBottom="16dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editAdminUser"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:singleLine="true"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layoutAdminPass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Secure Security Key"
+                    app:passwordToggleEnabled="true"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_marginBottom="24dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editAdminPass"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:singleLine="true"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnAdminLoginSubmit"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:text="Initialize Admin Session"
+                    android:textSize="16sp"
+                    app:backgroundTint="#0D47A1"
+                    app:cornerRadius="8dp" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAdminGoBack"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="← Return to Public Portal"
+            android:textColor="#90CAF9"
+            app:strokeColor="#90CAF9"
+            app:layout_constraintTop_toBottomOf="@id/cardAdminLogin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Government Domain Encrypted Connection"
+            android:textSize="12sp"
+            android:textColor="#90CAF9"
+            app:layout_constraintTop_toBottomOf="@id/btnAdminGoBack"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

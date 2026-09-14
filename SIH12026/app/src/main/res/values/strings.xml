@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">E-Waste Mitra</string>
+    <string name="tagline">Smart Solutions for a Cleaner Tomorrow</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_price">Price</string>
+    <string name="nav_lots">Lots</string>
+    <string name="nav_ledger">Earnings</string>
+
+    <string name="welcome_collector">Welcome, Friend</string>
+    <string name="action_create_lot">New Collection</string>
+    <string name="action_price_board">Market Price</string>
+    <string name="action_safety">Safety Guide</string>
+    <string name="action_recyclers">Find Recycler</string>
+
+    <string name="recent_transactions">Recent Activities</string>
+
+    <!-- Material Categories -->
+    <string name="cat_pcb">Circuit Boards</string>
+    <string name="cat_battery">Batteries</string>
+    <string name="cat_crt">Old TVs (CRT)</string>
+    <string name="cat_cable">Copper Cables</string>
+
+    <!-- Shared String Localizations for UI views -->
+    <string name="title_portal">E-Waste Mitra Portal</string>
+    <string name="select_role_prompt">Select Portal Role</string>
+    <string name="role_kabadi">Kabadi Wala</string>
+    <string name="role_recycler">Recycler</string>
+    <string name="auth_btn_text">Secure Sign In</string>
+    <string name="create_account_title">Create Account</string>
+</resources>

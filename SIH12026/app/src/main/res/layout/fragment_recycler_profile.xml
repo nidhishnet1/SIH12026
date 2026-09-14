@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F9FA"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enterprise Profile"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/design_default_color_primary"
+            android:layout_marginBottom="24dp"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="@android:color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Registered Entity Information"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#555555"
+                    android:layout_marginBottom="16dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Full Name:"
+                    android:textSize="12sp"
+                    android:textColor="#777777" />
+                <TextView
+                    android:id="@+id/textRecyclerFullName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Amit Sharma"
+                    android:textSize="16sp"
+                    android:textColor="#333333"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="12dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Contact Number:"
+                    android:textSize="12sp"
+                    android:textColor="#777777" />
+                <TextView
+                    android:id="@+id/textRecyclerPhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+91 9911223344"
+                    android:textSize="16sp"
+                    android:textColor="#333333"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="12dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email Address:"
+                    android:textSize="12sp"
+                    android:textColor="#777777" />
+                <TextView
+                    android:id="@+id/textRecyclerEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="contact@greentech.in"
+                    android:textSize="16sp"
+                    android:textColor="#333333"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="12dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Aadhar Identifier:"
+                    android:textSize="12sp"
+                    android:textColor="#777777" />
+                <TextView
+                    android:id="@+id/textRecyclerAadhar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4125-9632-8521"
+                    android:textSize="16sp"
+                    android:textColor="#333333"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="12dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="GST Identification No:"
+                    android:textSize="12sp"
+                    android:textColor="#777777" />
+                <TextView
+                    android:id="@+id/textRecyclerGst"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="09BBBBB2222B1Z2"
+                    android:textSize="16sp"
+                    android:textColor="#333333"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="4dp"/>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBackToRecyclerDash"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="24dp"
+            android:text="Back to Recycler Console"
+            app:cornerRadius="8dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRecyclerLogout"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="12dp"
+            android:text="Logout Session"
+            app:backgroundTint="#C62828"
+            app:cornerRadius="8dp" />
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F9FA"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp">
+
+        <!-- Profile Avatar -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardAvatar"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="24dp"
+            app:cardCornerRadius="50dp"
+            app:cardElevation="4dp"
+            app:strokeWidth="2dp"
+            app:strokeColor="@color/design_default_color_primary"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_home"
+                android:padding="24dp"
+                app:tint="@color/design_default_color_primary" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Profile Name -->
+        <TextView
+            android:id="@+id/textProfileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Your Name"
+            android:textColor="#212121"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/cardAvatar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Profile Role / Verification Badge -->
+        <TextView
+            android:id="@+id/textProfileBadge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="PENDING VERIFICATION"
+            android:textColor="@color/design_default_color_primary"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/textProfileName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Profile Information Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardProfileInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:layout_constraintTop_toBottomOf="@id/textProfileBadge"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <!-- Heading -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Account Particulars"
+                    android:textColor="#212121"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <!-- Phone Label -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Contact Identifier:"
+                    android:textColor="#757575"
+                    android:textSize="13sp" />
+
+                <!-- Phone Value -->
+                <TextView
+                    android:id="@+id/textProfilePhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Phone number"
+                    android:textColor="#212121"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <!-- Email Label -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Digital Mailing Address:"
+                    android:textColor="#757575"
+                    android:textSize="13sp" />
+
+                <!-- Email Value -->
+                <TextView
+                    android:id="@+id/textProfileEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Email address"
+                    android:textColor="#212121"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <!-- GST Label -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Tax Identity / GSTIN:"
+                    android:textColor="#757575"
+                    android:textSize="13sp" />
+
+                <!-- GST Value -->
+                <TextView
+                    android:id="@+id/textProfileGst"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="GST number"
+                    android:textColor="#212121"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Logout Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnProfileLogout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Sign Out of Session"
+            android:textAllCaps="false"
+            app:cornerRadius="12dp"
+            app:layout_constraintTop_toBottomOf="@id/cardProfileInfo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- App Version -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp"
+            android:text="App Version 1.1.0 • Secure Token Active"
+            android:textColor="#9E9E9E"
+            android:textSize="12sp"
+            app:layout_constraintTop_toBottomOf="@id/btnProfileLogout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

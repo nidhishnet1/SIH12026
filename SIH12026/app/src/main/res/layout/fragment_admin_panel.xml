@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F6F9">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Admin Home Header -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Administrator Home"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/design_default_color_primary"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Review and approve partner identity credentials"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Management Sections Label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pending Verification Queue"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_marginBottom="12dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPendingRegistrations"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            tools:listitem="@layout/item_pending_registration" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLogoutAdmin"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Exit Admin Panel"
+            android:textColor="#C62828" />
+
+    </LinearLayout>
+</ScrollView>

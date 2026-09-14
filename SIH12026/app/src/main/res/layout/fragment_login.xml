@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#F8F9FA">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="12dp">
+
+        <!-- App Logo / Title Banner -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardBanner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="@color/design_default_color_primary"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="24dp">
+
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:src="@drawable/ic_logo_ewaste"
+                    android:contentDescription="@string/app_name"
+                    app:tint="@android:color/white"
+                    android:layout_marginBottom="8dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_name"
+                    android:textColor="@android:color/white"
+                    android:textSize="28sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Secure Marketplace Portal"
+                    android:textColor="#E0E0E0"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/textSelectRole"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/select_role_prompt"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            app:layout_constraintTop_toBottomOf="@id/cardBanner"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- Role Toggle Group Container -->
+        <HorizontalScrollView
+            android:id="@+id/roleScroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:scrollbars="none"
+            app:layout_constraintTop_toBottomOf="@id/textSelectRole">
+
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/toggleGroupRole"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:singleSelection="true"
+                app:checkedButton="@+id/btnRoleKabadi">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnRoleKabadi"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/role_kabadi"
+                    app:icon="@drawable/ic_home" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnRoleRecycler"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/role_recycler"
+                    app:icon="@drawable/ic_recycler" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnRoleAdmin"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Admin Panel"
+                    android:visibility="gone"
+                    app:icon="@drawable/ic_safety" />
+
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+        </HorizontalScrollView>
+
+        <!-- Credentials Input Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardCredentials"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="3dp"
+            app:cardBackgroundColor="@android:color/white"
+            app:layout_constraintTop_toBottomOf="@id/roleScroll">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/textFormTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kabadi Wala Authentication"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/design_default_color_primary"
+                    android:layout_marginBottom="16dp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layoutUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Username / Registration ID"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_marginBottom="12dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editUsername"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:singleLine="true"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layoutPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Security Password"
+                    app:passwordToggleEnabled="true"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_marginBottom="16dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:singleLine="true"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:text="@string/auth_btn_text"
+                    android:textSize="16sp"
+                    app:cornerRadius="8dp" />
+
+                <TextView
+                    android:id="@+id/textForgotPassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="12dp"
+                    android:text="Forgot Password?"
+                    android:textColor="@color/design_default_color_primary"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+                <!-- Action links for new registration -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginTop="16dp">
+
+                    <TextView
+                        android:id="@+id/textGotoRegister"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="New User? Register Now"
+                        android:textColor="@color/design_default_color_primary"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:clickable="true"
+                        android:focusable="true"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textDemoCredentials"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="12dp"
+                    android:text="Demo: Enter any password to unlock portal"
+                    android:textColor="#888888"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Informational Footer -->
+        <TextView
+            android:id="@+id/textFooter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Authorized Personnel Only • Digital India Initiative"
+            android:textSize="12sp"
+            android:textColor="#999999"
+            app:layout_constraintTop_toBottomOf="@id/cardCredentials"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Visible Small Path for Admin (Bottom Center) -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAdminPath"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Internal Admin Login"
+            android:textSize="10sp"
+            android:textColor="#DDDDDD"
+            app:layout_constraintTop_toBottomOf="@id/textFooter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <View
+            android:id="@+id/adminSecretPath"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

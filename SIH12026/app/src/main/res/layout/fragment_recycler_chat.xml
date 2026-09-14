@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E8F5E9">
+
+    <!-- Enterprise Chat Header -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardRecyclerChatHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="0dp"
+        app:cardBackgroundColor="#1B5E20"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Recycler - Collector Dispatch Log"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"/>
+
+                <TextView
+                    android:id="@+id/textRecyclerEta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="ETA: 30 Mins"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#1B5E20"
+                    android:background="@android:color/white"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="2dp"/>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Direct Enterprise Secure Channel"
+                android:textSize="12sp"
+                android:textColor="#C8E6C9"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Message List -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvRecyclerChatMessages"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="8dp"
+        android:clipToPadding="false"
+        app:layout_constraintTop_toBottomOf="@id/cardRecyclerChatHeader"
+        app:layout_constraintBottom_toTopOf="@id/layoutRecyclerInput" />
+
+    <!-- Message Input Bar -->
+    <LinearLayout
+        android:id="@+id/layoutRecyclerInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:hintEnabled="false"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editRecyclerMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Type dispatch instruction..."
+                android:background="@null"
+                android:padding="10dp"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSendRecyclerMessage"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            app:backgroundTint="#1B5E20"
+            app:icon="@drawable/ic_recycler"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:cornerRadius="24dp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
